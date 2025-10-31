@@ -5,12 +5,14 @@
         standout="bg-teal text-white"
         v-model="show"
         :options="options"
-        :label=Select Designation
+        label="Select Designation"
+        v-on:update:modelValue="updateDesignation()"
+        
       />
     </q-card>
 
     <div>
-      <q-dialog v-model="show" persistent>
+      <q-dialog v-model="display" persistent >
         <q-card>
           <q-card-section class="row items-center">
             <span class="q-ml-sm">you selected !!</span>
@@ -30,13 +32,14 @@ import { ref } from 'vue'
 export default {
   setup() {
     return {
-      show: ref(true),
+      show: ref(''),
+      display: ref(false),
       options: ['Google', 'Facebook', 'Twitter', 'Apple', 'Oracle'],
     }
   },
   methods: {
-    updateDesignation(newVal) {
-      alert(newVal)
+    updateDesignation() {
+      this.display = true;
     },
   },
 }
