@@ -1,0 +1,65 @@
+# # ---- Python ----
+# __pycache__/
+# *.py[cod]
+# *.pyo
+# *.pyd
+# *.so
+# *.egg
+# *.egg-info/
+# *.manifest
+# *.spec
+
+# # ---- Virtual environment ----
+# .venv/
+# venv/
+# env/
+# ENV/
+# pip-wheel-metadata/
+# *.venv
+
+# # ---- Flask / instance data ----
+# instance/
+# *.db
+# *.sqlite3
+
+# # ---- Environment & secrets ----
+# .env
+# .env.*
+# !.env.example
+
+# # ---- IDE / Editor ----
+# .vscode/
+# .idea/
+# *.swp
+# *.swo
+# .DS_Store
+
+# # ---- Logs / Temp files ----
+# *.log
+# logs/
+# tmp/
+# *.tmp
+
+# # ---- Unit test / coverage reports ----
+# htmlcov/
+# .tox/
+# .nox/
+# .coverage
+# .coverage.*
+# .cache
+# pytest_cache/
+# nosetests.xml
+# coverage.xml
+
+# # ---- Build / Distribution ----
+# build/
+# dist/
+# wheelhouse/
+# .eggs/
+# *.egg-info/
+
+# # ---- Docker ----
+# *.pid
+# *.tar
+# *.gz
+# docker-compose.override.yml
