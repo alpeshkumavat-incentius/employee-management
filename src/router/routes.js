@@ -4,6 +4,11 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children:[
       {
+        path:'',
+        redirect : '/register'
+        
+      },
+      {
         path:'register', component:() => import('pages/RegisterPage.vue')
       },
       {

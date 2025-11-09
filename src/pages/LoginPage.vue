@@ -8,8 +8,8 @@
 
             <q-card-section align="center">
 
-                <q-input v-model="info.email" label="Enter your email" />
-                <q-input v-model="info.password" label="Make Strong Password" />
+                <q-input v-model="authStore.email" label="Enter your email" />
+                <q-input v-model="authStore.password" label="Make Strong Password" />
             </q-card-section>
 
 
@@ -23,21 +23,24 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+
 import axios from 'axios';
 import { useRouter } from 'vue-router';
+
+import { authStore } from 'src/stores/authStore';
 
 export default {
     setup() {
 
         return {
-            info: ref({
-                email: '',
-                password: ''
-            }),
+            // info: ref({
+            //     email: '',
+            //     password: ''
+            // }),
 
-            router: useRouter()
+            router: useRouter(),
 
+            authStore : authStore()
         }
     },
     methods: {
@@ -48,8 +51,8 @@ export default {
                     method: 'post',
                     url: 'http://127.0.0.1:5000/login',
                     data: {
-                        email: this.info.email,
-                        password: this.info.password
+                        email: this.authStore.email,
+                        password: this.authStore.password
                     }
                 })
                 if (res.data['msg']) {
