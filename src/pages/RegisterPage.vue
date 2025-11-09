@@ -23,9 +23,6 @@
         </q-card>
 
     </div>
-
-
-
 </template>
 
 
@@ -34,6 +31,8 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
+
+
 
 export default {
 
@@ -48,7 +47,9 @@ export default {
                     password: ''
                 }
             ),
-            router: useRouter()
+            router: useRouter(),
+
+
         }
     },
 
@@ -56,6 +57,7 @@ export default {
     methods: {
 
         async onSubmit() {
+            console.log(this.store.username);
             try {
                 const res = await axios({
                     method: 'post',
